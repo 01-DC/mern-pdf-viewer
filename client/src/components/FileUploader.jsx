@@ -11,7 +11,7 @@ const FileUploader = () => {
 
 		const file = myRef.current.files[0]
 		const fileExtension = file.name.split(".").at(-1)
-		console.log(file)
+		// console.log(file)
 		if (fileExtension !== "pdf") {
 			myRef.current.value = ""
 			setFileSelectError("File type should be pdf only")
@@ -49,7 +49,7 @@ const FileUploader = () => {
 				fileData: base64,
 			})
 
-			console.log(res)
+			// console.log(res)
 			myRef.current.value = ""
 			setLoading(false)
 		} catch (error) {

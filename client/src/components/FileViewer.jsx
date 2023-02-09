@@ -8,7 +8,7 @@ const FileViewer = () => {
 	const getAllFiles = async () => {
 		try {
 			const res = await axios.get("api/v1/files")
-			console.log(res.data)
+			// console.log(res.data)
 			setFiles(res.data)
 		} catch (error) {
 			console.log(error)

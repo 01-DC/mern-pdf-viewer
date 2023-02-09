@@ -13,7 +13,7 @@ const getAllFiles = async (req, res) => {
 
 const getFileById = async (req, res) => {
 	try {
-		console.log(req.params.id)
+		// console.log(req.params.id)
 		const fileData = await fileDataModel.findOne({ _id: req.params.id })
 		res.status(200).json(fileData)
 	} catch (error) {
