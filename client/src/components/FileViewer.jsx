@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import axios from "axios"
 
 const FileViewer = () => {
@@ -38,7 +39,11 @@ const FileViewer = () => {
 							2
 						)} kB`}</p>
 						<div className="card-actions">
-							<button className="btn btn-accent">View PDF</button>
+							<Link
+								to={`/file/${f.fileData}`}
+								className="btn btn-accent">
+								View PDF
+							</Link>
 						</div>
 					</div>
 				</div>
