@@ -5,9 +5,12 @@ import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import FileUploader from "./components/FileUploader"
 import FileViewer from "./components/FileViewer"
-import PDFViewer from './components/PDFViewer'
+import PDFViewer from "./components/PDFViewer"
 
-axios.defaults.baseURL = "http://localhost:8080"
+// axios.defaults.baseURL = "http://localhost:8080"
+axios.defaults.baseURL = "https://mern-pdf-viewer-api.onrender.com"
+axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*"
+axios.defaults.headers.common["Access-Control-Allow-Headers"] = "*"
 
 const App = () => {
 	return (
