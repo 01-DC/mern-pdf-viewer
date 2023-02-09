@@ -1,8 +1,11 @@
 import React, { useRef, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
 const FileUploader = () => {
 	const myRef = useRef()
+	const navigate = useNavigate()
+
 	const [fileSelectError, setFileSelectError] = useState("")
 	const [loading, setLoading] = useState(false)
 
@@ -52,6 +55,7 @@ const FileUploader = () => {
 			// console.log(res)
 			myRef.current.value = ""
 			setLoading(false)
+			navigate(0)
 		} catch (error) {
 			console.log(error)
 		}
